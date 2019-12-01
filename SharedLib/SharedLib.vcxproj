@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{128A0940-737A-417B-9982-F0ED726B19C4}</ProjectGuid>
-    <RootNamespace>DynamicLib</RootNamespace>
+    <RootNamespace>SharedLib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -92,7 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Include;$(ProjectDir)Source</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SL_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Include;$(ProjectDir)Source</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SL_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Include;$(ProjectDir)Source</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SL_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,7 +137,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)Include;$(ProjectDir)Source</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SL_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,23 +146,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Include\API.h" />
-    <ClInclude Include="Include\IClass2.h" />
-    <ClInclude Include="Include\IFuckinClass.h" />
-    <ClInclude Include="Include\IGame.h" />
-    <ClInclude Include="Include\IVersion.h" />
-    <ClInclude Include="Source\CClass1.h" />
-    <ClInclude Include="Include\IClass1.h" />
-    <ClInclude Include="Source\CClass2.h" />
-    <ClInclude Include="Source\CVersion.h" />
-    <ClInclude Include="Source\CFuckinClass.h" />
+    <ClInclude Include="Include\SL\API.hpp" />
+    <ClInclude Include="Include\SL\IAnimal.hpp" />
+    <ClInclude Include="Include\SL\IAnimalFactory.hpp" />
+    <ClInclude Include="Include\SL\IVersion.hpp" />
+    <ClInclude Include="Source\SL\CAnimalFactory.hpp" />
+    <ClInclude Include="Source\SL\CDog.hpp" />
+    <ClInclude Include="Source\SL\CVersion.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\API.cpp" />
-    <ClCompile Include="Source\CClass1.cpp" />
-    <ClCompile Include="Source\CClass2.cpp" />
-    <ClCompile Include="Source\CVersion.cpp" />
-    <ClCompile Include="Source\CFuckinClass.cpp" />
+    <ClCompile Include="Source\SL\CAnimalFactory.cpp" />
+    <ClCompile Include="Source\SL\CDog.cpp" />
+    <ClCompile Include="Source\SL\CVersion.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,6 @@
+*******************************************************
+Version 1.0.0
+*******************************************************
+	- First version.
+	- Version control.
+	- IAnimalFactory class wich allows the creation of a IAnimal objects (only dogs).
