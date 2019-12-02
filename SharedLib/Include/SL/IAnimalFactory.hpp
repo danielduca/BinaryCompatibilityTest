@@ -30,10 +30,12 @@ namespace sl
 		virtual void Destroy(IAnimal* const apAnimal) = 0;
 
 		// 1.2
-		// Method overload not BC on Windows!
-		// @todo: check on Linux.
-		//virtual IAnimal* Create(const sAnimalDefinition& aAnimalDefinition) const = 0;
 		virtual IAnimal* CreateV2(const sAnimalDefinition& aAnimalDefinition) const = 0;
+
+		// Method overload
+		// Windows (MSVC++ 14.23): NOT BINARY BACKWARD COMPATIBLE.
+		// Linux (g++ (Debian 4.9.2-10) 4.9.2): BINARY BACKWARD COMPATIBLE.
+		// virtual IAnimal* Create(const sAnimalDefinition& aAnimalDefinition) const = 0;
 	};
 
 	SL_API IAnimalFactory* GetAnimalFactory();

@@ -46,6 +46,7 @@ namespace sl
 
 	IAnimal* CMamotreto::Create(const eAnimalType aAnimalType) const
 	{
+		// return Create({ aAnimalType, "" });
 		return CreateV2({ aAnimalType, "" });
 	}
 
@@ -56,9 +57,20 @@ namespace sl
 
 	IAnimal* CMamotreto::CreateV2(const sAnimalDefinition& aAnimalDefinition) const
 	{
-		printf("CAnimalFactory: mamotreto object returned.\n");
+		printf("CAnimalFactory: mamotreto object returned WITH A CreateV2 METHOD!.\n");
 		return &Mamotreto;
 	}
+
+	// Method overload
+	// Windows (MSVC++ 14.23): NOT BINARY BACKWARD COMPATIBLE.
+	// Linux (g++ (Debian 4.9.2-10) 4.9.2): BINARY BACKWARD COMPATIBLE.
+	/*
+	IAnimal* CMamotreto::Create(const sAnimalDefinition& aAnimalDefinition) const
+	{
+		printf("CAnimalFactory: mamotreto object returned WITH THE NEW & IMPROVED OVERLOAD METHOD!.\n");
+		return &Mamotreto;
+	}
+	*/
 
 	bool CMamotreto::Check(const uint32_t aMajor1, const uint32_t aMinor1, const uint32_t aPatch1, const uint32_t aMajor2, const uint32_t aMinor2, const uint32_t aPatch2, const bool aThrowException)
 	{
