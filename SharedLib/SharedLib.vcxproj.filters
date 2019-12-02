@@ -18,45 +18,21 @@
     <ClInclude Include="Include\SL\API.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\SL\CVersion.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Include\SL\IVersion.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include\SL\IAnimal.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\SL\CDog.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Include\SL\IAnimalFactory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\SL\CAnimalFactory.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\SL\CCat.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\SL\CAnimalBase.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Source\SL\CMamotreto.hpp">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\SL\CVersion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SL\CDog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SL\CAnimalFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SL\CCat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\SL\CAnimalBase.cpp">
+    <ClCompile Include="Source\SL\CMamotreto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
