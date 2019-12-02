@@ -8,8 +8,12 @@ namespace sl
 	class CAnimalFactory : public IAnimalFactory
 	{
 	public:
+		// 1.0
 		virtual IAnimal* Create(const eAnimalType aAnimalType) const override;
 		virtual void Destroy(IAnimal* const apAnimal) override;
+
+		// 1.2
+		virtual IAnimal* Create(const sAnimalDefinition& aAnimalDefinition) const override;
 	};
 }
 

@@ -39,6 +39,9 @@
     <ClInclude Include="Source\SL\CCat.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SL\CAnimalBase.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\SL\CVersion.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\SL\CCat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SL\CAnimalBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

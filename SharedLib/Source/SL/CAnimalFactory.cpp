@@ -7,26 +7,7 @@ namespace sl
 {
 	IAnimal* CAnimalFactory::Create(const eAnimalType aAnimalType) const
 	{
-		IAnimal* pReturnValue = nullptr;
-
-		switch (aAnimalType)
-		{
-			case eAnimalType::Dog:
-			{
-				pReturnValue = new CDog();
-				printf("CAnimalFactory: CDog object created.\n");
-			}
-			break;
-
-			case eAnimalType::Cat:
-			{
-				pReturnValue = new CCat();
-				printf("CAnimalFactory: CCat object created.\n");
-			}
-			break;
-		}
-
-		return pReturnValue;
+		return Create({aAnimalType, ""});
 	}
 	
 	void CAnimalFactory::Destroy(IAnimal* const apAnimal)
@@ -41,6 +22,30 @@ namespace sl
 			delete pValue;
 			printf("CAnimalFactory: CCat object destroyed.\n");
 		}
+	}
+
+	IAnimal* CAnimalFactory::Create(const sAnimalDefinition& aAnimalDefinition) const
+	{
+		IAnimal* pReturnValue = nullptr;
+
+		switch (aAnimalDefinition.AnimalType)
+		{
+			case eAnimalType::Dog:
+			{
+				pReturnValue = new CDog(aAnimalDefinition.Name);
+				printf("CAnimalFactory: CDog object created.\n");
+			}
+			break;
+
+			case eAnimalType::Cat:
+			{
+				pReturnValue = new CCat(aAnimalDefinition.Name);
+				printf("CAnimalFactory: CCat object created.\n");
+			}
+			break;
+		}
+
+		return pReturnValue;
 	}
 
 	SL_API IAnimalFactory* GetAnimalFactory()

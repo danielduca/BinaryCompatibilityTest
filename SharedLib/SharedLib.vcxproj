@@ -150,12 +150,14 @@
     <ClInclude Include="Include\SL\IAnimal.hpp" />
     <ClInclude Include="Include\SL\IAnimalFactory.hpp" />
     <ClInclude Include="Include\SL\IVersion.hpp" />
+    <ClInclude Include="Source\SL\CAnimalBase.hpp" />
     <ClInclude Include="Source\SL\CAnimalFactory.hpp" />
     <ClInclude Include="Source\SL\CCat.hpp" />
     <ClInclude Include="Source\SL\CDog.hpp" />
     <ClInclude Include="Source\SL\CVersion.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\SL\CAnimalBase.cpp" />
     <ClCompile Include="Source\SL\CAnimalFactory.cpp" />
     <ClCompile Include="Source\SL\CCat.cpp" />
     <ClCompile Include="Source\SL\CDog.cpp" />
