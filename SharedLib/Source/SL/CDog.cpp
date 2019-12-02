@@ -11,6 +11,6 @@ namespace sl
 	void CDog::SayHello() const
 	{
 		CAnimalBase::SayHello();
-		printf("Hello! I'm a dog.\n");
+		printf("I'm a dog.\n");
 	}
 }

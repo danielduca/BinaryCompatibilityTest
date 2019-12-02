@@ -30,7 +30,10 @@ namespace sl
 		virtual void Destroy(IAnimal* const apAnimal) = 0;
 
 		// 1.2
-		virtual IAnimal* Create(const sAnimalDefinition& aAnimalDefinition) const = 0;
+		// Method overload not BC on Windows!
+		// @todo: check on Linux.
+		//virtual IAnimal* Create(const sAnimalDefinition& aAnimalDefinition) const = 0;
+		virtual IAnimal* CreateV2(const sAnimalDefinition& aAnimalDefinition) const = 0;
 	};
 
 	SL_API IAnimalFactory* GetAnimalFactory();

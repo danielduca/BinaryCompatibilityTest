@@ -7,7 +7,7 @@ namespace sl
 {
 	IAnimal* CAnimalFactory::Create(const eAnimalType aAnimalType) const
 	{
-		return Create({aAnimalType, ""});
+		return CreateV2({aAnimalType, ""});
 	}
 	
 	void CAnimalFactory::Destroy(IAnimal* const apAnimal)
@@ -24,7 +24,7 @@ namespace sl
 		}
 	}
 
-	IAnimal* CAnimalFactory::Create(const sAnimalDefinition& aAnimalDefinition) const
+	IAnimal* CAnimalFactory::CreateV2(const sAnimalDefinition& aAnimalDefinition) const
 	{
 		IAnimal* pReturnValue = nullptr;
 

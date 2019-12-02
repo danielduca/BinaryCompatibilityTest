@@ -11,6 +11,6 @@ namespace sl
 	void CCat::SayHello() const
 	{
 		CAnimalBase::SayHello();
-		printf("Hello! I'm a cat.\n");
+		printf("I'm a cat.\n");
 	}
 }
