@@ -8,6 +8,7 @@ namespace sl
 	class CCat : public IAnimal
 	{
 	public:
+		virtual ~CCat();
 		virtual void SayHello() const override;
 	};
 }

@@ -24,6 +24,12 @@ namespace sl
 				printf("CAnimalFactory: CCat object created.\n");
 			}
 			break;
+
+			default:
+			{
+				pReturnValue = nullptr;
+				printf("CAnimalFactory: No object created.\n");
+			}
 		}
 
 		return pReturnValue;

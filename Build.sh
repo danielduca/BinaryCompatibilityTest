@@ -2,7 +2,7 @@
 
 mkdir -p Build
 cd Build
-g++ -std=c++11 -Wall -Werror -fPIC -shared -I ../SharedLib/Include -DSL_API_EXPORTS ../SharedLib/Source/*.cpp -o ../Bin/libDynamicLib.so
+g++ -std=c++11 -Wall -Werror -fPIC -shared -I ../SharedLib/Include -DSL_API_EXPORTS ../SharedLib/Source/SL/*.cpp -o ../Bin/libSharedLib.so
 g++ -std=c++11 -Wall -Werror -Wl,-rpath='${ORIGIN}' ../Executable/*.cpp -o ../Bin/Executable -I ../SharedLib/Include -L ../Bin -lSharedLib
 
 # NOTAS:
