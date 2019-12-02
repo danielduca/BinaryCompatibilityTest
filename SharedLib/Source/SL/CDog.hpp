@@ -8,6 +8,7 @@ namespace sl
 	class CDog : public IAnimal
 	{
 	public:
+		virtual ~CDog();
 		virtual void SayHello() const override;
 	};
 }
