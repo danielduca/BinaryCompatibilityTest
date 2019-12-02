@@ -1,6 +1,7 @@
 
 #include "CAnimalFactory.hpp"
 #include "CDog.hpp"
+#include "CCat.hpp"
 
 namespace sl
 {
@@ -16,6 +17,13 @@ namespace sl
 				printf("CAnimalFactory: CDog object created.\n");
 			}
 			break;
+
+			case eAnimalType::Cat:
+			{
+				pReturnValue = new CCat();
+				printf("CAnimalFactory: CCat object created.\n");
+			}
+			break;
 		}
 
 		return pReturnValue;
@@ -23,12 +31,15 @@ namespace sl
 	
 	void CAnimalFactory::Destroy(IAnimal* const apAnimal)
 	{
-		CDog* const pDog = dynamic_cast<CDog*>(apAnimal);
-
-		if (pDog != nullptr)
+		if (auto* const pValue = dynamic_cast<CDog*>(apAnimal))
 		{
-			delete pDog;
+			delete pValue;
 			printf("CAnimalFactory: CDog object destroyed.\n");
+		}
+		else if (auto* const pValue = dynamic_cast<CCat*>(apAnimal))
+		{
+			delete pValue;
+			printf("CAnimalFactory: CCat object destroyed.\n");
 		}
 	}
 

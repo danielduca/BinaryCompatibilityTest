@@ -10,6 +10,7 @@ namespace sl
 	{
 		None = 0,
 		Dog,
+		Cat,
 		Number
 	};
 
