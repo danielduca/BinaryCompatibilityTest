@@ -34,7 +34,7 @@ namespace sl
 
 	SL_API IAnimalFactory* GetAnimalFactory()
 	{
-		CAnimalFactory AnimalFactory;
+		static CAnimalFactory AnimalFactory;
 		return &AnimalFactory;
 	}
 }

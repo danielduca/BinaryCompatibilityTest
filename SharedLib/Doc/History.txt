@@ -1,6 +1,13 @@
 *******************************************************
+Version 1.0.1
+*******************************************************
+	- Bug fixes:
+		- Se soluciona problema de compilación en Release.
+
+*******************************************************
 Version 1.0.0
 *******************************************************
-	- First version.
-	- Version control.
-	- IAnimalFactory class wich allows the creation of a IAnimal objects (only dogs).
+	- Primera versión.
+	- Se añade control de versiones.
+	- Se añade interfaz IAnimalFactory que permite la creación de objectos IAnimal.
+	- Se añade implementación "Dog" en IAnimalFactory.

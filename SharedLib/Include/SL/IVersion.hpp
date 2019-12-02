@@ -12,7 +12,7 @@
 */
 #define SL_MAJOR_VERSION 	1
 #define SL_MINOR_VERSION 	0
-#define SL_PATCH_VERSION 	0
+#define SL_PATCH_VERSION 	1
 #define SL_CODENAME			"ALPHA"
 
 /*
