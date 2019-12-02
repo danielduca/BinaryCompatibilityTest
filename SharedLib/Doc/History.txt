@@ -1,11 +1,20 @@
 *******************************************************
+Version 1.2.0
+*******************************************************
+	- Refactor IAnimalFactory. Ahora se permite crear animales mediante estructura de datos de definicion.
+
+*******************************************************
+Version 1.1.0
+*******************************************************
+	- Se añade implementación "Cat" en IAnimalFactory.
+
+*******************************************************
 Version 1.0.1
 *******************************************************
 	- Bug fixes:
 		- Se soluciona problema de compilación en Release.
 
-*******************************************************
-Version 1.0.0
+*******************************************************Version 1.0.0
 *******************************************************
 	- Primera versión.
 	- Se añade control de versiones.

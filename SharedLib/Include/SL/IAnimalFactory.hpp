@@ -3,6 +3,7 @@
 
 #include "SL/API.hpp"
 #include "SL/IAnimal.hpp"
+#include <string>
 
 namespace sl
 {
@@ -10,14 +11,29 @@ namespace sl
 	{
 		None = 0,
 		Dog,
+		Cat,
 		Number
+	};
+
+	struct sAnimalDefinition
+	{
+		eAnimalType AnimalType;
+		std::string Name;
 	};
 
 	class IAnimalFactory
 	{
 	public:
+		
+		// 1.0
 		virtual IAnimal* Create(const eAnimalType aAnimalType) const = 0;
 		virtual void Destroy(IAnimal* const apAnimal) = 0;
+
+		// 1.2
+		// Method overload not BC on Windows!
+		// @todo: check on Linux.
+		//virtual IAnimal* Create(const sAnimalDefinition& aAnimalDefinition) const = 0;
+		virtual IAnimal* CreateV2(const sAnimalDefinition& aAnimalDefinition) const = 0;
 	};
 
 	SL_API IAnimalFactory* GetAnimalFactory();

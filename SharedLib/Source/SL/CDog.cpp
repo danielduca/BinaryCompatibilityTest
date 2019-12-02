@@ -3,8 +3,14 @@
 
 namespace sl
 {
+	CDog::CDog(const std::string& aName) :
+		CAnimalBase(aName)
+	{
+	}
+
 	void CDog::SayHello() const
 	{
-		printf("Hello! I'm a dog.\n");
+		CAnimalBase::SayHello();
+		printf("I'm a dog.\n");
 	}
 }

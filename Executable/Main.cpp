@@ -26,9 +26,14 @@ int main()
 		printf("Compiled with version: %u.%u.%u '%s'.\n", Version.Major, Version.Minor, Version.Patch, Version.Codename.c_str());
 		printf("Shared lib version: %u.%u.%u '%s'.\n", BuiltInVersion.Major, BuiltInVersion.Minor, BuiltInVersion.Patch, BuiltInVersion.Codename.c_str());
 
-		sl::IAnimal* const pDog = sl::GetAnimalFactory()->Create(sl::eAnimalType::Dog);
+		auto const pDog = sl::GetAnimalFactory()->CreateV2({ sl::eAnimalType::Dog, "Bingo" });
+		auto const pCat = sl::GetAnimalFactory()->CreateV2({ sl::eAnimalType::Cat, "Tigger" });
+
 		pDog->SayHello();
+		pCat->SayHello();
+
 		sl::GetAnimalFactory()->Destroy(pDog);
+		sl::GetAnimalFactory()->Destroy(pCat);
 	}
 	catch (const std::exception& e)
 	{
